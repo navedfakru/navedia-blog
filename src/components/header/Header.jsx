@@ -13,15 +13,15 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const userData = useSelector(state => state.auth.userData);
-  console.log("userdata::", userData)
+  // console.log("userdata::", userData)
 
   const logout = () => {
     authService.logout()
   }
 
   useEffect(() => {
-    console.log("footer", userData?.labels[0]);
-    console.log("fotter is admin", userData?.labels[0] !== 'admin');
+    // console.log("footer", userData?.labels[0]);
+    // console.log("fotter is admin", userData?.labels[0] !== 'admin');
     setIsAdmin(userData?.labels[0] === 'admin')
     setUser(userData);
   }, [userData])

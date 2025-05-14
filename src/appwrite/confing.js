@@ -1,4 +1,4 @@
-import { Client, Databases, ID, Storage } from "appwrite";
+import { Client, Databases, ID, Storage, Query } from "appwrite";
 import conf from "../conf/conf";
 
 
@@ -84,7 +84,7 @@ class Service {
 
     // get all posts
 
-    async getPosts(queries = []){
+    async getPosts(queries = [Query.orderDesc('$createdAt')]){
         try {
             return await this.databases.listDocuments(
                 conf.appwriteDatabaseId,

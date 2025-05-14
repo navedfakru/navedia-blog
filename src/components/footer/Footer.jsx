@@ -9,8 +9,8 @@ const Footer = () => {
   const userData = useSelector(state => state.auth.userData)
 
   useEffect(() => {
-    console.log("footer", userData?.labels[0] )
-    console.log("fotter is admin", userData?.labels[0] === 'admin' )
+    // console.log("footer", userData?.labels[0] )
+    // console.log("fotter is admin", userData?.labels[0] === 'admin' )
     setIsAdmin(userData?.labels[0] === 'admin')
   }, [userData])
 

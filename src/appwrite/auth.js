@@ -16,10 +16,13 @@ export class AuthService {
 
       async googleAuth() {
         try {
+            const isDev = process.env.NODE_ENV;
+            console.log("auth.js", isDev)
+            const redirectURL = isDev === 'development' ? 'http://localhost:5173' : 'https://navedia-blog.netlify.app';
             return  this.account.createOAuth2Session(
                 OAuthProvider.Google,
-                'http://localhost:5173/all-posts',
-                'http://localhost:5173',
+                `${redirectURL}/all-posts`,
+                `${redirectURL}`,
             );
 
         } catch (error) {

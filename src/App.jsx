@@ -14,6 +14,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const isDev = process.env.NODE_ENV
+    console.log("App.jsx", isDev)
     authService.getCurrentUser()
       .then((userData) => {
         if (userData) {

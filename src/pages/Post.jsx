@@ -14,7 +14,7 @@ function Post() {
   const posts = useSelector(state => state.posts.allPosts.documents);
   const userData = useSelector(state => state.auth.userData);
 
-  // console.log("Posts :: post.jsx", posts)
+  console.log("Posts :: post.jsx", posts)
   // console.log("useData :: post.jsx", userData)
 
   const deletePost = () => {
