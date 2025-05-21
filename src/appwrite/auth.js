@@ -18,7 +18,7 @@ export class AuthService {
         try {
             const isDev = process.env.NODE_ENV;
             console.log("auth.js", isDev)
-            const redirectURL = isDev === 'development' ? 'http://localhost:5173' : 'https://navedia-blog.netlify.app';
+            const redirectURL = isDev === 'development' ? 'http://localhost:5173' : 'https://blog.navedx.com';
             return  this.account.createOAuth2Session(
                 OAuthProvider.Google,
                 `${redirectURL}/all-posts`,
