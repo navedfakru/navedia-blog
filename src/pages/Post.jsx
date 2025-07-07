@@ -87,7 +87,7 @@ function Post() {
         <div className='w-full mb-6'>
           <h2 className="text-2xl md:text-3xl font-bold">{post.title}</h2>
         </div>
-        <div className='ck-content w-full'>
+        <div className='ck-content w-full prose md:prose-xl'>
           <div className='px-4'>
             {parse(post.content)}
           </div>
@@ -97,4 +97,4 @@ function Post() {
   ) : null;
 }
 
-export default Post
+export default Post 
